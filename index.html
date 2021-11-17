@@ -60,7 +60,7 @@
                    <h4 class="role">Support Anu</h4>
                    
                     <br>
-                    <span><label class="btn btn-primary p-2" onclick="edit()">Edit</label></span>
+                    <span><label class="btn btn-primary p-2" id="edit">Edit</label></span>
                     <span><label class="btn btn-warning p-2">Resume</label></span>
                 </div>
                 <div class="col-sm-5">
@@ -126,7 +126,7 @@
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" placeholder="Enter email" id="email">
             </div>
-            <button type="submit" class="btn btn-primary w-100" onclick="save()">Submit</button>
+            <button type="submit" class="btn btn-primary w-100" id="save">Submit</button>
         </div>
     </div>
     <script>
@@ -150,8 +150,11 @@
             $(".nama").html($("#nama").val());
             $(".email").html($("#email").val());
         }
-    </script>
 
+        document.getElementById("save").addEventListener("click", save);
+        document.getElementById("edit").addEventListener("click", edit);
+    </script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
